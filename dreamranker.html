@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Ranker Institute</title>
+  <style>
+    body{margin:0;font-family:Arial;background:#0f172a;color:white}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:#020617;position:sticky;top:0}
+    nav h1{color:#facc15}
+    nav a{color:white;margin:0 10px;text-decoration:none}
+    nav a:hover{color:#facc15}
+
+    .hero{padding:80px 20px;text-align:center}
+    .hero h2{font-size:40px}
+    .btn{background:#facc15;color:black;padding:12px 20px;border-radius:8px;text-decoration:none;display:inline-block;margin:5px}
+    .btn-red{background:#ef4444;color:white}
+
+    .section{padding:40px 20px}
+    .cards{display:flex;gap:20px;flex-wrap:wrap}
+    .card{background:#1e293b;padding:20px;border-radius:10px;flex:1;min-width:250px}
+
+    .highlight{color:#facc15}
+
+    .live{background:#020617;padding:40px;text-align:center}
+    .ai{background:#1e293b;padding:40px;text-align:center}
+
+    .form-box{background:#1e293b;padding:20px;border-radius:10px;max-width:400px;margin:auto}
+    input{width:100%;padding:10px;margin:10px 0;border:none;border-radius:6px}
+
+    footer{text-align:center;padding:20px;background:#020617;margin-top:20px}
+  </style>
+</head>
+<body>
+
+<nav>
+  <h1>Dream Ranker</h1>
+  <div>
+    <a href="#">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#live">Live</a>
+    <a href="#ai">AI</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Alwar ka Trusted Coaching 🚀</h2>
+  <p>1st to 12th | Navodaya | Sainik | JMI Preparation</p>
+  <p class="highlight">100% Result | 8 Years Experience</p>
+  <a href="#contact" class="btn-red btn">FREE DEMO CLASS</a>
+  <a href="#courses" class="btn">ADMISSION OPEN</a>
+</section>
+
+<!-- RESULT -->
+<section class="section">
+  <h2>🏆 Our Results</h2>
+  <div class="cards">
+    <div class="card">100% Result</div>
+    <div class="card">5 Students in Merit</div>
+    <div class="card">8+ Years Experience</div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="section" id="courses">
+  <h2>📚 Courses</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Class 1–10</h3>
+      <p>All Subjects + Foundation</p>
+      <button onclick="payNow()" class="btn">Enroll ₹499</button>
+    </div>
+    <div class="card">
+      <h3>Class 11–12</h3>
+      <p>Math | Science | English</p>
+      <button onclick="payNow()" class="btn">Enroll ₹999</button>
+    </div>
+    <div class="card">
+      <h3>Navodaya / Sainik</h3>
+      <p>Full Preparation</p>
+      <button onclick="payNow()" class="btn">Enroll ₹1499</button>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE -->
+<section class="live" id="live">
+  <h2>🎥 Live Classes</h2>
+  <p>Join daily live classes with expert teachers</p>
+  <a href="#" class="btn-red btn">Join Live</a>
+</section>
+
+<!-- AI -->
+<section class="ai" id="ai">
+  <h2>🤖 AI Learning</h2>
+  <p>Ask doubts anytime, get instant answers</p>
+  <a href="#" class="btn">Try AI</a>
+</section>
+
+<!-- FORM -->
+<section class="section" id="contact">
+  <h2>📞 Book Free Demo</h2>
+  <div class="form-box">
+    <input type="text" id="name" placeholder="Parent Name" />
+    <input type="text" id="phone" placeholder="Mobile Number" />
+    <button onclick="sendWhatsApp()" class="btn">Submit</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Dream Ranker Institute</p>
+</footer>
+
+<script>
+function sendWhatsApp(){
+  let name=document.getElementById('name').value;
+  let phone=document.getElementById('phone').value;
+  let msg=`Hello, I want demo class. Name: ${name}, Phone: ${phone}`;
+  window.open(`https://wa.me/916350075640?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
+function payNow(){
+  alert("Payment system connect karne ke liye Razorpay integrate karein");
+}
+</script>
+
+</body>
+</html>
